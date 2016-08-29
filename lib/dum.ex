@@ -1,5 +1,6 @@
 defmodule Dum do
   use Application
+
   def start( _type, _args ) do
     import Supervisor.Spec, warn: false
 
@@ -12,6 +13,7 @@ defmodule Dum do
   end
 
   def run do
+    IO.puts "run"  
     { :ok, _ } = Plug.Adapters.Cowboy.http AppRouter, []
   end
 end

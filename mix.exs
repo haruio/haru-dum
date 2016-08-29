@@ -14,7 +14,7 @@ defmodule Dum.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:cowboy, :plug, :logger, :exrm, :conform, :conform_exrm], mod: {Dum, []}]
+    [applications: [:cowboy, :plug, :logger, :exrm, :conform, :conform_exrm, :amnesia], mod: {Dum, []}]
   end
 
   # Dependencies can be Hex packages:
@@ -31,6 +31,7 @@ defmodule Dum.Mixfile do
      {:plug, "~> 1.1"},
      {:exrm, "~> 1.0.0-rc7"},
      {:conform, "~> 1.0.0-rc8"},
-     {:conform_exrm, "~> 0.2.0"}]
+     {:conform_exrm, "~> 0.2.0"},
+     {:amnesia, github: "meh/amnesia", tag: :master}]
   end
 end
